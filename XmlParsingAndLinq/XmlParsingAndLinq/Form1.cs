@@ -28,6 +28,14 @@ namespace XmlParsingAndLinq
             XDocument xdoc = XDocument.Load(@"C:\Users\That Guy\Documents\JMdict\JMdict_e.xml");
             xdoc.Descendants("entry").Select( p => new Entry {
                 Id = int.Parse(p.Element("ent_seq").Value),
+                KanjiEntries = p.Descendants("k_ele").Select(n => new KanjiEntry
+                {
+
+                    Kanji = n.Elements("keb").Any() ? n.Element("keb").Value : "",
+                    KanjiInformation = n.Elements("ke_inf").Any() ? n.Element("ke_inf").Value : "",
+                    KanjiPriority = n.Elements("ke_pri").Any() ? n.Element("ke_pri").Value : "",
+                    EntryId = int.Parse(p.Element("ent_seq").Value)
+                }).ToList(),
                 Readings = p.Descendants("r_ele").Select(n => new ReadingEntry
                 {
 
@@ -45,7 +53,7 @@ namespace XmlParsingAndLinq
                     Console.WriteLine(name.Reading);
                 }
                 Console.WriteLine("========================");
-                if (p.Id == 1013730)
+                if (p.Id <= 1000730)
                 {
                     Entry foundOne = p;
                     listBox1.Items.Add(foundOne);
