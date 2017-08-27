@@ -1,8 +1,8 @@
-﻿var data = [
-    { id: 1, author: "Daniel Lo Nigro", text: "Hello ReactJS.NET World!" },
-    { id: 2, author: "Pete Hunt", text: "This is one comment" },
-    { id: 3, author: "Jordan Walke", text: "This is *another* comment" }
-];
+﻿//var data = [
+//    { id: 1, author: "Daniel Lo Nigro", text: "Hello ReactJS.NET World!" },
+//    { id: 2, author: "Pete Hunt", text: "This is one comment" },
+//    { id: 3, author: "Jordan Walke", text: "This is *another* comment" }
+//];
 
 var Comment = React.createClass({
     rawMarkup: function () {
@@ -34,6 +34,11 @@ var CommentList = React.createClass({
                 </div>
             );
         });
+        return (
+            <div className="commentList" >
+                { commentNodes }
+            </div>
+        );
     }
 });
 
@@ -48,11 +53,27 @@ var CommentForm = React.createClass({
 });
 
 var CommentBox = React.createClass({
+    loadCommentsFromServer: function () {
+        var xhr = new XMLHttpRequest();
+        xhr.open('get', this.props.url, true);
+        xhr.onload = function () {
+            var data = JSON.parse(xhr.responseText);
+            this.setState({ data: data });
+        }.bind(this);
+        xhr.send();
+    },
+    getInitialState: function () {
+        return { data: [] };
+    },
+    componentDidMount: function () {
+        this.loadCommentsFromServer();
+        window.setInterval(this.loadCommentsFromServer, this.props.pollInterval);
+    },
     render: function () {
         return (
             <div className="commentBox">
                 <h1>Comments</h1>
-                <CommentList data={this.props.data} />
+                <CommentList data={this.state.data} />
                 <CommentForm />
             </div>
         );
@@ -60,6 +81,6 @@ var CommentBox = React.createClass({
 });
 
 ReactDOM.render(
-    <CommentBox data={this.props.data} />,
+    <CommentBox url="/comments" pollInterval={2000} />,
     document.getElementById('content')
 );

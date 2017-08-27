@@ -46,7 +46,8 @@ namespace ReactDemo.Controllers
         }
 
         [Route("comments")]
-        [ResponseCache(Location = ResponseCacheLocation.None, NoStore = true,)]
+        [ResponseCache(Location = ResponseCacheLocation.None, NoStore = true)]
+
         public ActionResult Comments()
         {
             return Json(_comments);
