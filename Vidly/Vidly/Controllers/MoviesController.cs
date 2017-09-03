@@ -11,7 +11,7 @@ namespace Vidly.Controllers
     public class MoviesController : Controller
     {
         // GET: Movies
-        public ActionResult Random()
+        public ActionResult Index()
         {
             var movie = new Movie() { Name = "Shrek!" };
             var customers = new List<Customer>
@@ -34,7 +34,7 @@ namespace Vidly.Controllers
             return Content("id=" + id);
         }
 
-        public ActionResult Index(int? pageIndex, string sortBy)
+        public ActionResult Random(int? pageIndex, string sortBy)
         {
             if (!pageIndex.HasValue)
             {
