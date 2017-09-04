@@ -225,6 +225,26 @@
     <Compile Include="Migrations\201709032317358_ApplyAnnotationsToCustomerName.Designer.cs">
       <DependentUpon>201709032317358_ApplyAnnotationsToCustomerName.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201709032345036_RmovedIsSubscibedFromCustomer.cs" />
+    <Compile Include="Migrations\201709032345036_RmovedIsSubscibedFromCustomer.Designer.cs">
+      <DependentUpon>201709032345036_RmovedIsSubscibedFromCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709032347166_AddedIsSubscribedToCustomer.cs" />
+    <Compile Include="Migrations\201709032347166_AddedIsSubscribedToCustomer.Designer.cs">
+      <DependentUpon>201709032347166_AddedIsSubscribedToCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709040021432_CanIAddAProperty.cs" />
+    <Compile Include="Migrations\201709040021432_CanIAddAProperty.Designer.cs">
+      <DependentUpon>201709040021432_CanIAddAProperty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709040030310_removingFields.cs" />
+    <Compile Include="Migrations\201709040030310_removingFields.Designer.cs">
+      <DependentUpon>201709040030310_removingFields.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709040034544_addedFieldsBack.cs" />
+    <Compile Include="Migrations\201709040034544_addedFieldsBack.Designer.cs">
+      <DependentUpon>201709040034544_addedFieldsBack.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -335,6 +355,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201709032317358_ApplyAnnotationsToCustomerName.resx">
       <DependentUpon>201709032317358_ApplyAnnotationsToCustomerName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709032345036_RmovedIsSubscibedFromCustomer.resx">
+      <DependentUpon>201709032345036_RmovedIsSubscibedFromCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709032347166_AddedIsSubscribedToCustomer.resx">
+      <DependentUpon>201709032347166_AddedIsSubscribedToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709040021432_CanIAddAProperty.resx">
+      <DependentUpon>201709040021432_CanIAddAProperty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709040030310_removingFields.resx">
+      <DependentUpon>201709040030310_removingFields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709040034544_addedFieldsBack.resx">
+      <DependentUpon>201709040034544_addedFieldsBack.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
