@@ -245,6 +245,10 @@
     <Compile Include="Migrations\201709040034544_addedFieldsBack.Designer.cs">
       <DependentUpon>201709040034544_addedFieldsBack.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201709040139158_AgainPopulatingMembershipTypes.cs" />
+    <Compile Include="Migrations\201709040139158_AgainPopulatingMembershipTypes.Designer.cs">
+      <DependentUpon>201709040139158_AgainPopulatingMembershipTypes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -370,6 +374,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201709040034544_addedFieldsBack.resx">
       <DependentUpon>201709040034544_addedFieldsBack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709040139158_AgainPopulatingMembershipTypes.resx">
+      <DependentUpon>201709040139158_AgainPopulatingMembershipTypes.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
