@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.10
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShinRin", "ShinRin\ShinRin.csproj", "{49255B14-BE6D-48F6-BCD2-5A8405663A20}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShinRin.Tests", "ShinRin.Tests\ShinRin.Tests.csproj", "{10BA950B-B957-43ED-A782-450740AC8935}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{49255B14-BE6D-48F6-BCD2-5A8405663A20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49255B14-BE6D-48F6-BCD2-5A8405663A20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49255B14-BE6D-48F6-BCD2-5A8405663A20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49255B14-BE6D-48F6-BCD2-5A8405663A20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10BA950B-B957-43ED-A782-450740AC8935}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10BA950B-B957-43ED-A782-450740AC8935}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10BA950B-B957-43ED-A782-450740AC8935}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10BA950B-B957-43ED-A782-450740AC8935}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E8933D50-67AF-4832-977D-B9DEE7FA3FF9}
+	EndGlobalSection
+EndGlobal

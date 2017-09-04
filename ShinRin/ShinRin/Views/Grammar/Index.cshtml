@@ -1,0 +1,35 @@
+﻿@model ShinRin.Models.GrammarTerm
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.Term</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>@Model.Term</th>
+    </tr>
+    <tr>
+        @if (Model.NounForm != null)
+        {
+            <td>@Model.NounForm.Name</td>
+        }
+    </tr>
+    <tr>
+        @if (Model.VerbForm != null)
+        {
+            <td>@Model.VerbForm.Name</td>
+        }
+    </tr>
+    <tr>
+        @if (Model.IAdjForm != null)
+        {
+            <td>@Model.IAdjForm.Name</td>
+        }
+    </tr>
+    <tr>
+        @if (Model.OtherForm != null)
+        {
+            <td>@Model.OtherForm.Name</td>
+        }
+    </tr></table>
