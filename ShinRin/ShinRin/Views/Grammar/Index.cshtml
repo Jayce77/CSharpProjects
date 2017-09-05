@@ -1,35 +1,107 @@
-﻿@model ShinRin.Models.GrammarTerm
+﻿@model ShinRin.Models.GrammarGroup
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>@Model.Term</h2>
+<h2>
+    @{ var column = "col-md-" + (12 / Model.GrammarTerms.Count()).ToString(); }
+    @for (int i = 0; i < Model.GrammarTerms.Count; i++)
+    {
+        
+        <div class= @column>@Model.GrammarTerms.ElementAt(i).Term</div>
+    }
+</h2>
 <table class="table table-bordered">
-    <tr>
-        <th>@Model.Term</th>
-    </tr>
-    <tr>
-        @if (Model.NounForm != null)
+    <thead>
+        <tr>
+            @foreach (var term in Model.GrammarTerms)
+            {
+                <th>@term.Term</th>
+            }
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var term in Model.GrammarTerms)
         {
-            <td>@Model.NounForm.Name</td>
+            if (term.NounForm != null)
+            {
+                <tr>
+                    @foreach (var gterm in Model.GrammarTerms)
+                    {
+                        if (gterm.NounForm != null)
+                        {
+                            <td>@gterm.NounForm.Name</td>
+                        }
+                        else
+                        {
+                            <td></td>
+                        }
+                    }
+                </tr>
+                break;
+            }
         }
-    </tr>
-    <tr>
-        @if (Model.VerbForm != null)
+        @foreach (var term in Model.GrammarTerms)
         {
-            <td>@Model.VerbForm.Name</td>
+            if (term.VerbForm != null)
+            {
+                <tr>
+                    @foreach (var gterm in Model.GrammarTerms)
+                    {
+                        if (gterm.VerbForm != null)
+                        {
+                            <td>@gterm.VerbForm.Name</td>
+                        }
+                        else
+                        {
+                            <td></td>
+                        }
+                    }
+                </tr>
+                break;
+            }
         }
-    </tr>
-    <tr>
-        @if (Model.IAdjForm != null)
+        @foreach (var term in Model.GrammarTerms)
         {
-            <td>@Model.IAdjForm.Name</td>
+            if (term.IAdjForm != null)
+            {
+                <tr>
+                    @foreach (var gterm in Model.GrammarTerms)
+                    {
+                        if (gterm.IAdjForm != null)
+                        {
+                            <td>@gterm.IAdjForm.Name</td>
+                        }
+                        else
+                        {
+                            <td></td>
+                        }
+                    }
+                </tr>
+                break;
+            }
         }
-    </tr>
-    <tr>
-        @if (Model.OtherForm != null)
+        @foreach (var term in Model.GrammarTerms)
         {
-            <td>@Model.OtherForm.Name</td>
+            if (term.OtherForm != null)
+            {
+                <tr>
+                    @foreach (var gterm in Model.GrammarTerms)
+                    {
+                        if (gterm.OtherForm != null)
+                        {
+                            <td>@gterm.OtherForm.Name</td>
+                        }
+                        else
+                        {
+                            <td></td>
+                        }
+                    }
+                </tr>
+                break;
+            }
         }
-    </tr></table>
+    </tbody>
+    
+</table>

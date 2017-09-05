@@ -12,19 +12,43 @@ namespace ShinRin.Controllers
         // GET: Grammar
         public ActionResult Index()
         {
-            var grammarTerm = GetGrammarTerm();
-            return View(grammarTerm);
+            var grammarGroup = GetGrammarGroup();
+            return View(grammarGroup);
         }
 
-        private GrammarTerm GetGrammarTerm()
+        private GrammarGroup GetGrammarGroup()
         {
-            return new GrammarTerm
+            return new GrammarGroup
             {
+
                 Id = 1,
-                Term = "ことに",
-                NounForm = new NounForm { Id = 1, Name = "N"},
-                VerbForm = new VerbForm { Id = 1, Name = "V"},
-                OtherForm = new OtherForm { Id = 1, Name = "数量詞"}
+                Name = "KotoniTabiniOkini",
+
+                GrammarTerms =new List<GrammarTerm>
+                {
+                    new GrammarTerm
+                    {
+                        Id = 1,
+                        Term = "ことに",
+                        NounForm = new NounForm { Id = 1, Name = "N" },
+                        VerbForm = new VerbForm { Id = 1, Name = "V" },
+                        OtherForm = new OtherForm { Id = 1, Name = "数量詞" }
+                    },
+                    new GrammarTerm
+                    {
+                        Id = 2,
+                        Term = "たびに",
+                        NounForm = new NounForm { Id = 1, Name = "N" },
+                        VerbForm = new VerbForm { Id = 1, Name = "V" }
+                    },
+                    new GrammarTerm
+                    {
+                        Id = 3,
+                        Term = "おきに",
+                        OtherForm = new OtherForm { Id = 1, Name = "数量詞" }
+                    },
+                }
+                
             };
         }
 
