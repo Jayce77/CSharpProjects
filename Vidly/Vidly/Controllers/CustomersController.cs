@@ -46,7 +46,9 @@ namespace Vidly.Controllers
         public ActionResult Create(Customer customer)
         {
             _context.Customers.Add(customer);
-            return View();
+            _context.SaveChanges();
+
+            return RedirectToAction("Index", "Customers");
         }
 
         [Route("Customers/Details/{id}")]
