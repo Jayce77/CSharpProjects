@@ -10,7 +10,7 @@ namespace ShinRin.Controllers
     public class GrammarController : Controller
     {
         // GET: Grammar
-        public ActionResult Index()
+        public ActionResult GrammarGroupDetails()
         {
             var grammarGroup = GetGrammarGroup();
             return View(grammarGroup);
