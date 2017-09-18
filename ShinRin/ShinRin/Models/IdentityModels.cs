@@ -29,5 +29,15 @@ namespace ShinRin.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<ShinRin.Models.GrammarTerm> GrammarTerms { get; set; }
+
+        public System.Data.Entity.DbSet<ShinRin.Models.IAdjForm> IAdjForms { get; set; }
+
+        public System.Data.Entity.DbSet<ShinRin.Models.NounForm> NounForms { get; set; }
+
+        public System.Data.Entity.DbSet<ShinRin.Models.OtherForm> OtherForms { get; set; }
+
+        public System.Data.Entity.DbSet<ShinRin.Models.VerbForm> VerbForms { get; set; }
     }
 }
