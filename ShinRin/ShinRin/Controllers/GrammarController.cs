@@ -14,6 +14,12 @@ namespace ShinRin.Controllers
             var GrammarTerms = GetGrammarTermList();
             return View(GrammarTerms);
         }
+
+        public ActionResult Create()
+        {
+            var grammarTerm = new GrammarTerm();
+            return View();
+        }
         
         // GET: Grammar
         public ActionResult GrammarGroupDetails()
