@@ -278,10 +278,10 @@
     <Content Include="Views\Grammar\GrammarGroupDetails.cshtml" />
     <Content Include="Views\Grammar\Index.cshtml" />
     <Content Include="Views\Grammar\Create.cshtml" />
+    <Content Include="Views\WordForms\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\WordForms\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

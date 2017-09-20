@@ -26,11 +26,12 @@ namespace ShinRin.Controllers
                 VerbForms = _context.VerbForms.ToList(),
                 NounForms = _context.NounForms.ToList(),
                 IAdjForms = _context.IAdjForms.ToList(),
+                NaAdjForms = _context.NaAdjForms.ToList(),
                 OtherForms = _context.OtherForms.ToList()
             };
 
 
-            return View();
+            return View(wordForms);
         }
 
         // GET: WordForms/Details/5
