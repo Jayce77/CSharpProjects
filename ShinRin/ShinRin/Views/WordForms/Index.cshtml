@@ -9,13 +9,16 @@
 
 
 <h4>Verbs</h4>
-<div form-control>
+@using (Html.BeginForm("SaveVerb", "WordForms"))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.VerbForm.Name)
+        @Html.TextBoxFor(m => m.VerbForm.Name, new { @class = "form-control" })
+    </div>
+    @Html.HiddenFor(m => m.VerbForm.Id)
+    <button type="submit" class="btn btn-primary">Save</button>
+}
 
-
-</div>
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
 <table class="table">
     <tr>
         <th></th>
@@ -34,9 +37,16 @@
 </table>
 
 <h4>Nouns</h4>
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+@using (Html.BeginForm("SaveNoun", "WordForms"))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.NounForm.Name)
+        @Html.TextBoxFor(m => m.NounForm.Name, new { @class = "form-control" })
+    </div>
+    @Html.HiddenFor(m => m.NounForm.Id)
+    <button type="submit" class="btn btn-primary">Save</button>
+}
+
 <table class="table">
     <tr>
         <th></th>
@@ -56,9 +66,16 @@
 </table>
 
 <h4>I-Adjectives</h4>
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+@using (Html.BeginForm("SaveIAdjForm", "WordForms"))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.IAdjForm.Name)
+        @Html.TextBoxFor(m => m.IAdjForm.Name, new { @class = "form-control" })
+    </div>
+    @Html.HiddenFor(m => m.IAdjForm.Id)
+    <button type="submit" class="btn btn-primary">Save</button>
+}
+
 <table class="table">
     <tr>
         <th></th>
@@ -78,9 +95,15 @@
 </table>
 
 <h4>Na-Adjectives</h4>
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+@using (Html.BeginForm("SaveNaAdjForm", "WordForms"))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.NaAdjForm.Name)
+        @Html.TextBoxFor(m => m.NaAdjForm.Name, new { @class = "form-control" })
+    </div>
+    @Html.HiddenFor(m => m.NaAdjForm.Id)
+    <button type="submit" class="btn btn-primary">Save</button>
+}
 <table class="table">
     <tr>
         <th></th>
@@ -100,9 +123,15 @@
 </table>
 
 <h4>Others</h4>
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+@using (Html.BeginForm("SaveOtherForm", "WordForms"))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.OtherForm.Name)
+        @Html.TextBoxFor(m => m.OtherForm.Name, new { @class = "form-control" })
+    </div>
+    @Html.HiddenFor(m => m.OtherForm.Id)
+    <button type="submit" class="btn btn-primary">Save</button>
+}
 <table class="table">
     <tr>
         <th></th>
