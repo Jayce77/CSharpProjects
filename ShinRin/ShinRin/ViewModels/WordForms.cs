@@ -17,5 +17,15 @@ namespace ShinRin.ViewModels
         public IEnumerable<NaAdjForm> NaAdjForms { get; set; }
 
         public IEnumerable<OtherForm> OtherForms { get; set; }
+
+        public VerbForm VerbForm { get; set; }
+
+        public NounForm NounForm { get; set; }
+
+        public IAdjForm IAdjForm { get; set; }
+
+        public NaAdjForm NaAdjForm { get; set; }
+
+        public OtherForm OtherForm { get; set; }
     }
 }
