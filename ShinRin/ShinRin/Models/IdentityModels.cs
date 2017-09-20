@@ -34,6 +34,8 @@ namespace ShinRin.Models
 
         public System.Data.Entity.DbSet<ShinRin.Models.IAdjForm> IAdjForms { get; set; }
 
+        public System.Data.Entity.DbSet<ShinRin.Models.NaAdjForm> NaAdjForms { get; set; }
+
         public System.Data.Entity.DbSet<ShinRin.Models.NounForm> NounForms { get; set; }
 
         public System.Data.Entity.DbSet<ShinRin.Models.OtherForm> OtherForms { get; set; }
