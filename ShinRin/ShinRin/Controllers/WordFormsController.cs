@@ -34,18 +34,6 @@ namespace ShinRin.Controllers
             return View(wordForms);
         }
 
-        // GET: WordForms/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
-
-        // GET: WordForms/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
-
         // POST: WordForms/Create
         [HttpPost]
         public ActionResult Create(FormCollection collection)
@@ -60,34 +48,6 @@ namespace ShinRin.Controllers
             {
                 return View();
             }
-        }
-
-        // GET: WordForms/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: WordForms/Edit/5
-        [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add update logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: WordForms/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
         }
 
         // POST: WordForms/Delete/5
