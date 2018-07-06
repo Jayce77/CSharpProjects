@@ -11,8 +11,10 @@ namespace DataStructuresAndAlgorithms
         static void Main(string[] args)
         {
             var ms = new MergeSort();
+            var qs = new QuickSort();
             var arr = new int[] { 4, 7, 14, 1, 3, 9, 17 };
-            ms.Sort(arr, 0, arr.Length - 1);
+            //ms.Sort(arr, 0, arr.Length - 1);
+            qs.Sort(arr);
             Console.Read();
         }
     }

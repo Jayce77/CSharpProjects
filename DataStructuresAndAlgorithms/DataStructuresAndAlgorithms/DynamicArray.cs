@@ -6,32 +6,32 @@ using System.Threading.Tasks;
 
 namespace DataStructuresAndAlgorithms
 {
-    class DynamicArray<String>
+    class DynamicArray<T>
     {
-        private Object[] _data;
+        private T[] _data;
         private int _size;
         private int _initialCapacity;
 
         public DynamicArray(int initialCapacity)
         {
             this._initialCapacity = initialCapacity;
-            _data = new Object[initialCapacity];
+            _data = new T[initialCapacity];
         }
 
-        public string Get(int index)
+        public T Get(int index)
         {
-            return (string)_data[index];
+            return _data[index];
         }
 
-        public void Set(int index, string value)
+        public void Set(int index, T value)
         {
             if (_data[index] != null) _size++;
             _data[index] = value;
         }
 
-        public void Insert(int index, string value)
+        public void Insert(int index, T value)
         {
-            var newDynamicArray = new DynamicArray<String>(_data.Length + 1);
+            var newDynamicArray = new DynamicArray<T>(_data.Length + 1);
             for (int i = 0; i < _data.Length + 1; i++)
             {
                 if (i < index)
